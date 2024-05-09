@@ -1,0 +1,75 @@
+.menuPage .sideMenu{
+    background-color: var(--dark-blue);
+    border-radius: 30px;
+    width: 50px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+
+.menuPage a {
+    text-decoration: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.menuPage a:hover {
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    /* span {
+        color: var(--light-blue);
+    } */
+}
+
+.menuPage span {
+    position: absolute;
+    left: -120px;
+    visibility: hidden;
+    text-align: right;
+    width: 110px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menuPage a:hover span {
+    visibility: visible;
+    transition: visibility 0.3s ease;
+}
+
+.menuPage .contMenuIcon {
+    margin-top: 10px;
+}
+
+.menuPage {
+    position: fixed;
+    right: 0;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.modal-header {
+    background: #F7941E;
+    color: #fff;
+}
+
+.required:after {
+    content: "*";
+    color: red;
+}
