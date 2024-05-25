@@ -243,7 +243,7 @@ const ForgetPasswordPopup = ({ onClose }) => {
                 setForgetPassword({ ...forgetPassword, step: 3 }); // Fixed state update
                
                 token=response.data.token;
-                console.log('token: ',token)
+                
             }
         } catch (error) {
             setForgetPassword({ ...forgetPassword, error: error.response.data.message }); // Fixed error handling
@@ -260,7 +260,7 @@ const ForgetPasswordPopup = ({ onClose }) => {
             }});
             if (response.status === 200) {
                 onClose(); // Close the popup
-                console.log("reseted")
+                
             }
         } catch (error) {
             setForgetPassword({ ...forgetPassword, error: error.response.data.message }); // Fixed error handling
