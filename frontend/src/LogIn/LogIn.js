@@ -214,6 +214,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faCircleExclamation, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 let token; //TODO: set in local storage  & access
+
 const ForgetPasswordPopup = ({ onClose }) => {
     const [forgetPassword, setForgetPassword] = useState({
         loading: false,
@@ -241,7 +242,7 @@ const ForgetPasswordPopup = ({ onClose }) => {
             const response = await axios.post('http://localhost:4121/verify', { otp: forgetPassword.otp }); // Fixed object key name
             if (response.status === 200) {
                 setForgetPassword({ ...forgetPassword, step: 3 }); // Fixed state update
-               
+               // FIXME: set Token here
                 token=response.data.token;
                 
             }
@@ -315,8 +316,10 @@ const LogIn = () => {
         }).then((response) => {
             setLogIn({ ...logIn, loading: false, err: [] });
             if (response.data.status === true) {
+                
                 navigate('/admin');
             } else {
+                 // FIXME: set Token here
                 navigate('/home');
             }
         }).catch((error) => {
