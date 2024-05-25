@@ -213,7 +213,7 @@ import { FaLock } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faCircleExclamation, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-
+let token; //TODO: set in local storage  & access
 const ForgetPasswordPopup = ({ onClose }) => {
     const [forgetPassword, setForgetPassword] = useState({
         loading: false,
@@ -241,6 +241,9 @@ const ForgetPasswordPopup = ({ onClose }) => {
             const response = await axios.post('http://localhost:4121/verify', { otp: forgetPassword.otp }); // Fixed object key name
             if (response.status === 200) {
                 setForgetPassword({ ...forgetPassword, step: 3 }); // Fixed state update
+               
+                token=response.data.token;
+                console.log('token: ',token)
             }
         } catch (error) {
             setForgetPassword({ ...forgetPassword, error: error.response.data.message }); // Fixed error handling
@@ -250,11 +253,14 @@ const ForgetPasswordPopup = ({ onClose }) => {
     const handleResetPassword = async () => {
         try {
             const response = await axios.patch('http://localhost:4121/reset', {
-                newPassword: forgetPassword.newPassword,
+                password: forgetPassword.newPassword,
                 confirmPassword: forgetPassword.confirmPassword
-            });
+            },{headers:{
+                Authorization:`Bearer ${token}`
+            }});
             if (response.status === 200) {
                 onClose(); // Close the popup
+                console.log("reseted")
             }
         } catch (error) {
             setForgetPassword({ ...forgetPassword, error: error.response.data.message }); // Fixed error handling
