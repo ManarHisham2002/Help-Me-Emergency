@@ -4,7 +4,7 @@ import Master from './Master/Master';
 import InfoMaster from './Master//InfoMaster';
 import LogIn from './LogIn/LogIn';
 import SignUp from './SignUp/SignUp';
-// import Home from './Home/Home';
+import Home from './Home/Home';
 // import Disease from './Diseases/Disease';
 // import InfoDisease from './Diseases/InfoDisease';
 // import Pharmacy from './Pharmacy/Pharmacy';
@@ -21,8 +21,8 @@ const RoutesPages = () => {
                 <Route path="/master/:id" exact element={<InfoMaster />} />
                 <Route path="/login" element={<LogIn />} />
                 <Route path="/signup" element={<SignUp />} />
-                {/* <Route path="/home" element={<Home />} />
-                <Route path="/disease" element={<Disease />} />
+                 <Route path="/home" element={<Home />} />
+                {/*<Route path="/disease" element={<Disease />} />
                 <Route path="/disease/:diseaseId" element={<InfoDisease />} />
                 <Route path="/pharmacy" element={<Pharmacy />} />
                 <Route path="/emergency" element={<Emergency />} />
