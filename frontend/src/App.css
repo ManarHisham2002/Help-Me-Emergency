@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+:root {
+    --dark-blue: #04557d;
+    --light-blue: #209EBB;
+    --baby-blue: #8ECAE6;
+    --dark-orange: #FC8500;
+    --light-orange: #FFB701;
+    --mint-green: #3EA99F;
+    --dangers: rgb(222, 45, 45);
+    --dark-blue-rgba: 4, 85, 125;
+    --light-blue-rgba: 173, 216, 230;
+    --baby-blue-rgba: 142, 202, 230;
+    --dark-orange-rgba: 252, 133, 0;
+    --light-orange-rgba: 255, 183, 1;
+    --mint-green-rgba: 62, 169, 159;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-blue);
+    border-radius: 0 10px 10px 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+ul {
+    list-style: none !important;
+}
+
+li {
+    list-style: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.navbar-toggler:active,
+.navbar-toggler {
+    outline: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
