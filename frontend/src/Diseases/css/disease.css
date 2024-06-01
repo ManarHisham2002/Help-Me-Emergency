@@ -1,0 +1,293 @@
+/* Start Diseases Style */
+.disease .searchField {
+    margin-bottom: 50px;
+    margin-left: 100px;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: var(--dark-blue);
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    background: var(--baby-blue-rgba);
+    background: linear-gradient(105deg, rgba(var(--baby-blue-rgba), 1) 0%, rgba(var(--light-blue-rgba), 1) 100%);
+    padding: 5px;
+}
+
+.disease .searchField input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 90%;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.disease .searchField input::placeholder {
+    font-size: 14px;
+    color: var(--dark-blue);
+}
+
+.disease .searchField .fa-search-disease {
+    color: var(--dark-blue);
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.disease .box {
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.disease .box .overlay-text-disease {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    font-family: "Protest Riot", sans-serif;
+    font-size: 20px;
+    display: inline;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px 10px 50% 50%;
+}
+
+.disease .box img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.disease .box a::before {
+    content: attr(data-disease);
+    border-radius: 50%;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(var(--light-blue-rgba), 0.7), rgba(var(--light-blue-rgba), 0.7), rgba(var(--light-blue-rgba), 0.7));
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--light-orange);
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.disease .box a:hover::before {
+    transform: translateX(0);
+}
+
+.disease .box a:hover {
+    .overlay-text-disease {
+        display: none;
+    }
+}
+
+.disease .main-btn {
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(to right, rgba(var(--light-orange-rgba)), rgba(var(--light-orange-rgba)), rgba(var(--light-orange-rgba)));
+    color: var(--light-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.disease .main-btn:hover {
+    background-position: right;
+    color: var(--dark-blue);
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgba(var(--dark-orange-rgba), 1), rgba(var(--dark-orange-rgba), 0.8), rgba(var(--dark-orange-rgba), 1));
+}
+
+/* End Diseases Style */
+
+
+/* Start Information Diseases Style */
+.our-videos p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #2a2a2a;
+}
+
+.our-videos img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.our-videos .videos-left-dec img {
+    width: 220px;
+    height: 471px;
+    left: 0;
+    top: 120px;
+    position: absolute;
+}
+
+.our-videos .videos-right-dec img {
+    width: 730px;
+    height: 523px;
+    right: 0;
+    top: 45px;
+    position: absolute;
+}
+
+.our-videos {
+    position: relative;
+    margin-bottom: -30px;
+    padding-top: 75px;
+    margin-top: 0px;
+}
+
+.our-videos .naccs {
+    position: relative;
+}
+
+.our-videos .naccs .menu div {
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.our-videos .naccs .menu div {
+    transition: all 0.3s;
+}
+
+.our-videos .naccs .menu div.active .thumb .inner-content {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+}
+
+.our-videos .naccs .menu div.active .thumb .inner-content h4 {
+    top: 40%;
+    transform: translateY(-55%);
+    position: relative;
+}
+
+.our-videos .naccs .menu div.active .thumb .inner-content span {
+    display: block;
+    position: relative;
+    top: 55%;
+    transform: translateY(-55%);
+}
+
+.our-videos ul.nacc {
+    position: relative;
+    min-height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.our-videos ul.nacc li {
+    opacity: 0;
+    transform: translateX(-50px);
+    position: absolute;
+    list-style: none;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.our-videos ul.nacc li.active {
+    transition-delay: 0.3s;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.our-videos ul.nacc li {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.our-videos .nacc .thumb {
+    position: relative;
+    border-radius: 23px;
+}
+
+.our-videos .nacc .thumb iframe {
+    border-radius: 23px;
+    height: 675px;
+}
+
+.our-videos .nacc .thumb .overlay-effect {
+    background: var(--light-blue);
+    background: linear-gradient(105deg, rgba(var(--light-blue-rgba), 1) 0%, rgba(var(--light-blue-rgba), 1) 100%);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    padding: 15px 10px;
+    text-align: center;
+    width: 200px;
+    color: var(--dark-orange);
+}
+
+.our-videos .nacc .thumb .overlay-effect h4 {
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.our-videos .nacc .thumb .overlay-effect span {
+    font-size: 15px;
+}
+
+.our-videos .menu .thumb {
+    position: relative;
+}
+
+.our-videos .menu {
+    border-radius: 23px;
+    padding-right: 10px;
+}
+
+.our-videos .menu .thumb img {
+    border-radius: 23px;
+}
+
+.our-videos .menu .active .thumb .inner-content {
+    background: var(--dark-orange);
+    background: linear-gradient(105deg, rgba(var(--dark-orange-rgba), 1) 0%, rgba(var(--dark-orange-rgba), 1) 100%);
+    color: var(--dark-blue);
+}
+
+.our-videos .menu .thumb .inner-content {
+    background: var(--light-blue);
+    background: linear-gradient(105deg, rgba(var(--light-blue-rgba), 1) 0%, rgba(var(--light-blue-rgba), 1) 100%);
+    border-top-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 30px;
+    transition: all 0.3s;
+    color: var(--dark-orange);
+}
+
+.our-videos .menu .thumb .inner-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.our-videos .menu .thumb .inner-content span {
+    font-size: 15px;
+    font-weight: 400;
+    display: none;
+    transition: all 0.3s;
+}
