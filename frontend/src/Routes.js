@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Master from './Master/Master';
 import InfoMaster from './Master//InfoMaster';
 import LogIn from './LogIn/LogIn';
-import Admin from './Admin/Admin';
+// import Admin from './Admin/Admin';
 import SignUp from './SignUp/SignUp';
 import Home from './Home/Home';
 import Disease from './Diseases/Disease';
@@ -22,7 +22,7 @@ const RoutesPages = () => {
                 <Route path="/" exact element={<Master />} />
                 <Route path="/master/:id" exact element={<InfoMaster />} />
                 <Route path="/login" element={<LogIn />} />
-                <Route path="/admin" element={<Admin />} />
+                // <Route path="/admin" element={<Admin />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/disease" element={<Disease />} />
