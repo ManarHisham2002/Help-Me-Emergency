@@ -1,0 +1,514 @@
+.admin {
+    min-height: 100vh;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.admin .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 270px;
+    padding: 10px 14px;
+    background: #e4e9f7;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.admin .sidebar.close {
+    width: 88px;
+}
+
+.admin .sidebar li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: left;
+    margin-top: 10px;
+    
+}
+
+.admin .sidebar header .image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.admin .sidebar header .image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.admin .sidebar .icon {
+    font-size: 20px;
+    margin-left: -10px;
+}
+
+.admin .sidebar .text {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.admin .sidebar.close .text {
+    opacity: 0;
+}
+
+
+.admin .sidebar header {
+    position: relative;
+}
+
+.admin .sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+.admin .sidebar header .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.admin .sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--dark-blue);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin .sidebar.close .toggle {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.admin .sidebar .menu {
+    margin-top: 40px;
+}
+
+.admin .sidebar .menu-bar {
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.admin .menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.admin .menu-bar .bottom-content .toggle-switch {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin .toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: #ddd;
+    transition: all 0.3s ease;
+}
+
+.admin .switch::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+.admin  .home {
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: #e4e9f7;
+    transition: all 0.3s ease;
+}
+
+.admin .home .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: #707070;
+    padding: 12px 60px;
+}
+
+.admin .sidebar.close~.home {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+.admin .nav-link {
+    color: #707070;
+    transition: all 0.2s ease;
+}
+.admin .active {
+    color: var(--dark-blue);
+}
+
+
+/* Card Style */
+.admin .our-team {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: #dae2fa;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.admin .our-team .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.admin .our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.admin .our-team:hover .picture::before {
+    height: 100%;
+}
+
+.admin .our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.admin .our-team .picture img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.admin .our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+.admin .our-team .name{
+    text-transform: capitalize;
+    font-family: "Protest Riot", sans-serif;
+}
+.admin .our-team .title {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+}
+
+/* 
+-----------------------------------
+InfoPage
+-----------------------------------
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+.infoCardAdmin {
+    font: 300 13px/1.6 Roboto, Helvetica, Arial;
+    color: #444;
+    position: relative;
+    background: #448AFF;
+    min-height: 100vh;
+    text-align: center;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.infoCardAdmin:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+}
+
+.infoCardAdmin ul {
+    list-style: none;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+    border: 0;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    /* Margin to prevent sticking to the top */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    position: relative;
+    background: #9edbe9;
+}
+
+.profile-card header {
+    display: block;
+    position: relative;
+    background: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 30px 0 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.profile-card header:before {
+    content: "";
+    position: absolute;
+    background: url('http://ali.shahab.pk/blur.php?img=http://ali.shahab.pk/ali-shahab.jpg&x=60') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.profile-card header:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%);
+}
+
+.profile-card header img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.profile-card header h1 {
+    font-weight: 200;
+    font-size: 42px;
+    color: #444;
+    letter-spacing: -3px;
+    margin: 0;
+    padding: 0;
+    font-family: "Protest Riot", sans-serif;
+}
+
+.profile-card header h2 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: .5px;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-card .profile-bio {
+    padding: 0 30px;
+    text-align: center;
+    color: #888;
+}
+
+.blog-card {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    margin-bottom: 1.6%;
+    background: #fff;
+    font-family: sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.meta {
+    position: relative;
+    z-index: 0;
+    height: 200px;
+    flex-basis: 40%;
+}
+
+.blog-card .meta:hover .photo {
+    transform: scale(1.3) rotate(3deg);
+}
+
+.photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s;
+}
+
+.photo img {
+    height: 100%;
+    width: 100%;
+}
+
+.description {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    flex-basis: 60%;
+}
+
+@media (min-width: 640px) {
+    .blog-card {
+        flex-direction: row;
+        max-width: 950px;
+    }
+
+    .meta {
+        height: auto;
+    }
+
+    .description:before {
+        transform: skewX(-3deg);
+        content: "";
+        background: #fff;
+        width: 30px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.iconDetailsAdmin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: var(--dark-orange);
+    border: 1px solid var(--dark-orange);
+}
+
+.description div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.description h2 {
+    font-size: 20px;
+    color: var(--dark-orange);
+    font-family: "Protest Riot", sans-serif;
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+.description h3 {
+    font-size: 16px;
+    color: var(--dark-blue);
+    font-family: "Protest Riot", sans-serif;
+}
+
+.btnUpdateAdmin {
+    display: inline-block;
+    width: 30%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, var(--dark-blue), var(--light-blue), var(--dark-blue));
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.infoCardAdmin input {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0 0.7rem;
+    margin: 0 1.5rem 15px 1.5rem;
+    font-size: 1.2rem;
+    font-family: "Protest Riot", sans-serif;
+    border-bottom: 2px solid #d9d9d9;
+}

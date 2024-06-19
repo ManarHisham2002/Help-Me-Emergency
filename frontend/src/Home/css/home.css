@@ -1,0 +1,191 @@
+.free-quote {
+  background-image: url(../img/First\ aid\ kit-bro.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 500px 100%;
+  padding: 120px 0px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-top: 0px;
+  justify-content: center;
+}
+
+.free-quote .section-heading {
+  margin-bottom: 60px;
+}
+
+.free-quote .section-heading h6,
+.free-quote .section-heading h4 {
+  color: #fff;
+}
+
+.free-quote .section-heading .line-dec {
+  margin: 0 auto;
+  background-color: #000;
+  display: none;
+}
+
+.free-quote form {
+  background-color: #fff;
+  width: 100%;
+  min-height: 150px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+
+.free-quote form input {
+  width: 70%;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: #000;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  position: relative;
+  z-index: 2;
+  outline: none;
+  font-family: "Protest Riot", sans-serif;
+}
+
+.listOfSymptoms {
+  position: absolute;
+  max-height: 30px;
+  border: 0 none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.listOfSymptoms option {
+  font-size: 0.8em;
+  padding: 0.3em 1em;
+  background-color: #ccc;
+  cursor: pointer;
+  font-family: "Protest Riot", sans-serif;
+  color: var(--dark-blue);
+}
+
+.listOfSymptoms option:hover,
+.listOfSymptoms option:focus {
+  color: #fff;
+  background-color: var(--dark-orange);
+  outline: 0 none;
+}
+
+.getDisease {
+  width: auto;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  margin-top: 30px;
+    margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: var(--baby-blue);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-orange);
+}
+
+.myDisease {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.iconClose {
+  position: absolute;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.myDisease .diseaseContainer {
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 23px;
+  font-size: 18px;
+  font-family: "Protest Riot", sans-serif;
+}
+
+.myDisease .diseaseContainer .dangers {
+  color: var(--dangers);
+}
+
+.myDisease .diseaseContainer .rate {
+  font-size: 26px;
+  font-size: 20px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.about_section {
+  width: 100%;
+  float: left;
+  padding: 90px 0px;
+}
+
+.about_taital {
+  width: 100%;
+  float: left;
+  font-size: 35px;
+  color: #151515;
+  padding-top: 60px;
+  font-family: "Protest Riot", sans-serif;
+}
+
+.about_taital span {
+  font-size: 50px;
+  font-weight: bolder;
+  color: var(--dark-orange);
+}
+
+.about_text {
+  width: 80%;
+  float: left;
+  font-size: 20px;
+  color: #524d4d;
+  margin: 0px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+.about_text span {
+  color: var(--dark-orange);
+  font-weight: 600;
+}
+
+.read_bt {
+  width: 150px;
+  margin-top: 30px;
+  float: left;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: var(--light-blue);
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 40px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.read_bt:hover {
+  color: #ffffff;
+  background-color: var(--dark-blue);
+}
+
+.about_img img {
+  max-width: 100%;
+  height: auto;
+}

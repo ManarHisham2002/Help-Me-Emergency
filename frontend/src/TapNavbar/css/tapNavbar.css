@@ -1,0 +1,180 @@
+.navContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.navContainer .menuTapNav {
+    padding: 7px;
+    background-image: linear-gradient(to right, rgba(var(--light-blue-rgba)), rgba(var(--light-blue-rgba)), rgba(var(--light-blue-rgba)));
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 35px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.075);
+}
+
+.navContainer .link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 50px;
+    border-radius: 99em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform-origin: center left;
+    transition: width 0.2s ease-in;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navContainer .link:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    border-radius: 99em;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    transform-origin: center right;
+    background-image: linear-gradient(to right, rgba(var(--dark-blue-rgba)), rgba(var(--dark-blue-rgba)), rgba(var(--dark-blue-rgba)));
+}
+
+
+.navContainer .link:hover,
+.navContainer .link:focus {
+    outline: 0;
+    width: 130px;
+}
+
+.navContainer .link:hover .link-icon,
+.navContainer .link:focus .link-icon {
+    color: #fff;
+}
+
+.navContainer .link:hover .link-title-tapNav,
+.navContainer .link:focus .link-title-tapNav {
+    color: #fff;
+}
+
+.navContainer .link:hover:before,
+.navContainer .link:focus:before {
+    transform: translateX(0);
+}
+
+.navContainer .link:hover:before .link-title-tapNav,
+.navContainer .link:focus:before .link-title-tapNav {
+    color: #fff;
+}
+
+.navContainer .link-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    flex-shrink: 0;
+    left: 18px;
+    position: absolute;
+}
+
+.navContainer .link-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.navContainer .link-title-tapNav {
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    transform-origin: center right;
+    display: block;
+    text-align: center;
+    text-indent: 28px;
+    width: 100%;
+    color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    .navContainer .menuTapNav {
+        width: 60%;
+    }
+
+    .navContainer .link {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navContainer .menuTapNav {
+        width: 70%;
+    }
+
+    .navContainer .link {
+        width: 50px;
+    }
+
+    .navContainer .link-title-tapNav {
+        text-indent: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navContainer .menuTapNav {
+        width: 80%;
+    }
+
+    .navContainer .link {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navContainer .link-title-tapNav {
+        text-indent: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navContainer .menuTapNav {
+        width: 90%;
+    }
+
+    .navContainer .link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navContainer .link-icon {
+        left: 10px;
+    }
+
+    .navContainer .link-title-tapNav {
+        text-indent: 18px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .navContainer .menuTapNav {
+        width: 90%;
+    }
+
+    .navContainer .link {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navContainer .link-icon {
+        width: 24px;
+        height: 24px;
+        left: 6px;
+    }
+
+    .navContainer .link-title-tapNav {
+        text-indent: 16px;
+    }
+}
